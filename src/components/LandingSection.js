@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Heading, VStack } from "@chakra-ui/react";
+import { Avatar, Heading, VStack, useMediaQuery  } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import profilePic from '../images/foto_perfil.jpeg';
 import htmlLogo from '../images/html.png'
@@ -19,8 +19,12 @@ const bio2 = "specialised in React";
 
 // Implement the UI for the LandingSection component according to the instructions.
 // Use a combination of Avatar, Heading and VStack components.
-const LandingSection = () => (
-  <FullScreenSection
+const LandingSection = () => {
+
+  const [isLargerThan600] = useMediaQuery("(min-width: 600px)");
+    
+  return (
+    <FullScreenSection
     justifyContent="center"
     alignItems="center"
     isDarkBackground
@@ -29,6 +33,7 @@ const LandingSection = () => (
 
     <VStack maxW='container.sm'>
     <Avatar 
+      mt={isLargerThan600 ?  0:8 }
       size='2xl' 
       name='Miguel Yunis'
       src={profilePic} 
@@ -68,8 +73,11 @@ const LandingSection = () => (
     </VStack>
     
   </FullScreenSection>
+  )
+
+  
 
 
-);
+  };
 
 export default LandingSection;

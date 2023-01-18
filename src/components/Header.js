@@ -7,7 +7,7 @@ import {
   faMedium,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, useMediaQuery } from "@chakra-ui/react";
 
 
 const socials = [
@@ -28,6 +28,7 @@ const socials = [
 
 const Header = () => {
   const headerRef = useRef(null);
+  const [isLargerThan600] = useMediaQuery("(min-width: 600px)");
 
   useEffect(() => {
     let prevScrollPos = window.scrollY;
@@ -81,13 +82,18 @@ const Header = () => {
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
-          px={16}
-          py={4}
-          justifyContent="space-between"
+         /*px={16}*/
+          px={isLargerThan600 ? 16 : 4}
+          py={isLargerThan600 ? 4 : 6}
+          display={isLargerThan600 ? "flex" : "block"}
+          justifyContent={isLargerThan600 ?  "space-between": "center" }
           alignItems="center"
         >
           <nav>
-            <HStack spacing={8}>
+            <HStack /*spacing={8}*/ 
+              spacing={isLargerThan600? 6 : 6} 
+              justifyContent={isLargerThan600 ?  "space-between": "center" }
+            >
               {socials.map(({ icon, url }) => {
                 return(
                 <a 
@@ -103,7 +109,11 @@ const Header = () => {
             </HStack>
           </nav>
           <nav>
-            <HStack spacing={8}>
+            <HStack /*spacing={8}*/ 
+              spacing={isLargerThan600 ? 6 : 6} 
+              justifyContent={isLargerThan600 ?  "space-between": "center" }
+              mt={isLargerThan600 ?  0:5 }
+            >
               <a href="/#projects" onClick={handleClick("projects")}>Projects</a>
               <a href="/#contactme" onClick={handleClick("contactme")}>Contact me</a>
             </HStack>

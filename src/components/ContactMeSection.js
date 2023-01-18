@@ -11,6 +11,7 @@ import {
   Select,
   Textarea,
   VStack,
+  useMediaQuery 
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
@@ -21,6 +22,7 @@ import emailjs from '@emailjs/browser'
 const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit(); 
  const { onOpen } = useAlertContext(); 
+ const [isLargerThan600] = useMediaQuery("(min-width: 600px)");
  
  const formik = useFormik({ 
    initialValues: { 
@@ -63,14 +65,16 @@ const LandingSection = () => {
    <FullScreenSection 
      isDarkBackground 
      backgroundColor="#512DA8" 
+     alignItems="flex-start"
+     width={isLargerThan600 ?  "100%" : "100%" }
      py={16} 
      spacing={8} 
    > 
-     <VStack w="1024px" p={32} alignItems="flex-start"> 
-       <Heading as="h1" id="contactme-section"> 
+     <VStack w="1024px" p={32} alignItems="center"width={isLargerThan600 ?  "100%" : "100% "} padding={isLargerThan600 ?  "30" :" auto "}> 
+       <Heading as="h1" id="contactme-section" textAlign={isLargerThan600 ?  "center" : "center"} > 
          Contact me 
        </Heading> 
-       <Box p={6} rounded="md" w="100%"> 
+       <Box p={6} rounded="md" width={isLargerThan600 ?  "100%" : "100% "} > 
          <form id="formId" onSubmit={formik.handleSubmit}> 
            <VStack spacing={4}> 
              <FormControl isInvalid={!!formik.errors.firstName && formik.touched.firstName}> 
