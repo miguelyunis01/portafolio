@@ -5,30 +5,30 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "Veterinary Patient Manager web App",
+    title: "Veterinary Patient Manager Web App",
     description:
       "React.JS project with VITE to manage patients for a veterinarian with the ability to save the information in LocalStorage.",
     getImageSrc: () => require("../images/photo1PJ.jpg"),
     url:"https://legendary-froyo-884021.netlify.app/"
   },
   {
-    title: "Expense Control web app",
+    title: "Expense Control Web App",
     description:
-      "React.JS project with VITE to control personal expenses with the ability to save the information in LocalStorage, the css is vanilla",
+      "React.JS project with VITE to control personal expenses with the ability to save the information in LocalStorage",
     getImageSrc: () => require("../images/photo2PJ.jpg"),
     url:"https://beautiful-twilight-2dcefa.netlify.app"
   },
   {
-    title: "Cryptocurrency Quotation web app",
+    title: "Cryptocurrency Quotation Web App",
     description:
-      "React.js cryptocurrency quoting app with VITE, consuming API.",
+      "React.js cryptocurrency quoting app with VITE, consuming an API.",
     getImageSrc: () => require("../images/photo3pj.jpg"),
     url:"https://dynamic-madeleine-c3408d.netlify.app/"
   },
   {
     title: "Movies Plus",
     description:
-      "Project made in vanilla Javascript with html and css, which makes a call to an API querying movies.",
+      "Project made in vanilla Javascript with HTML and CSS, which makes a call to an API querying movies.",
     getImageSrc: () => require("../images/photo4pj.jpg"),
     url:"https://heartfelt-pie-d91227.netlify.app/"
   },

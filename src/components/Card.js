@@ -20,6 +20,7 @@ const Card = ({ title, description, imageSrc, url }) => {
       <Text padding="10px" color="black">{description}</Text>
       <a
         href={url}
+        target="_blank"
       >
         <Flex align="center" paddingBottom="5px" cursor="pointer">
           <Text marginEnd="5px" color="black"text-align= "left">See more</Text>
