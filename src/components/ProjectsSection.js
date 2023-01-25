@@ -32,6 +32,13 @@ const projects = [
     getImageSrc: () => require("../images/photo4pj.jpg"),
     url:"https://heartfelt-pie-d91227.netlify.app/"
   },
+  {
+    title: "GuitarLA",
+    description:
+      "Full stack project of guitar store, blogs and more made in the frontend in Next Js, and the backend in Strapi, with a database in postgresSQL loaded in render. com. ",
+    getImageSrc: () => require("../images/guitarLA.png"),
+    url:"https://guitar-la-next-js-three.vercel.app/"
+  },
 ];
 
 const ProjectsSection = () => {
@@ -56,7 +63,7 @@ const ProjectsSection = () => {
       </Heading>
       <Box
         display="grid"
-        gridTemplateColumns={isLargerThan600 ?"repeat(2,minmax(0,1fr))":"repeat(1,minmax(0,1fr))"}
+        gridTemplateColumns={isLargerThan600 ?"repeat(3,minmax(0,1fr))":"repeat(1,minmax(0,1fr))"}
         gridGap={8}
         
       >
