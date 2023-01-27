@@ -39,6 +39,13 @@ const projects = [
     getImageSrc: () => require("../images/guitarLA.png"),
     url:"https://guitar-la-next-js-three.vercel.app/"
   },
+  {
+    title: "Auto Insurance Quote",
+    description:
+      "Application in ReactJS with VITE of insurance quotes according to the parameters used using useContext",
+    getImageSrc: () => require("../images/insurenceQuote.png"),
+    url:"https://auto-insurence-quotes.netlify.app/"
+  },
 ];
 
 const ProjectsSection = () => {
