@@ -6,15 +6,16 @@ import htmlLogo from '../images/html.png'
 import cssLogo from '../images/css-3.png'
 import jsLogo from '../images/java-script.png'
 import reactLogo from '../images/react.png'
-import boostrapLogo from '../images/bootstrap.png'
+import TypeScriptLogo from '../images/Typescript_logo_2020.svg'
 import NextLogo from '../images/nextJS Logo.png'
 import gitLogo from '../images/git.png'
 import remixLogo from '../images/remix.png'
 import tailwindLogo from '../images/tailwind.png'
+import vueLogo from '../images/Vue.js_Logo_2.svg.png'
 import '../styles/LandingSection.css';
 
 const greeting = "Hello, I am Miguel!";
-const bio1 = "A frontend developer";
+const bio1 = "A JavaScript Full Stack Developer";
 const bio2 = "specialised in React";
 
 // Implement the UI for the LandingSection component according to the instructions.
@@ -61,13 +62,16 @@ const LandingSection = () => {
         <img className="img react" src={remixLogo} alt="remix"/>
       </div>
       <div className="img-container" >
-        <img className="img react" src={boostrapLogo} alt="boostrap"/>
+        <img className="img react" src={TypeScriptLogo} alt="typescript"/>
       </div>
       <div className="img-container" >
         <img className="img react" src={tailwindLogo} alt="tailwind"/>
       </div>
       <div className="img-container" >
-        <img className="img react" src={gitLogo} alt="boostrap"/>
+        <img className="img react" src={gitLogo} alt="git"/>
+      </div>
+      <div className="img-container" >
+        <img className="img react" src={vueLogo} alt="git"/>
       </div>
     </div>
     </VStack>
